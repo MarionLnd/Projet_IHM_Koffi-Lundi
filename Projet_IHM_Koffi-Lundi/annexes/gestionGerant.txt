@@ -1,0 +1,12 @@
+var nbreOccupant = SELECT COUNT(*) FROM Chambre WHERE dateReservation = "2018/01/07" AND disponibilite = 1;
+
+var tauxOccupation = nbreOccupant / nbreTotalDeChambre;
+
+var nbreOccupantPeriode = SELECT COUNT(*) FROM Chambre WHERE dateReservation BETWEEN "2018/01/07" AND "2018/01/08" AND disponibilite = 1;
+
+var tauxOccupationPeriode = nbreOccupantPeriode / nbreTotalDeChambre;
+
+ public static String changerFormatDate (String date){	 //"20/10/2017" --> 2017/10/20
+        //String nouvelleDate = date.substring(6,10) + "-"+ date.substring(3,5) + "-" + date.substring(0,2);
+        return date.substring(6,10) + "-"+ date.substring(3,5) + "-" + date.substring(0,2);
+  }
